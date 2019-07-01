@@ -1,0 +1,35 @@
+server:
+  port: 8080 #端口号
+  #访问是否需要加工程名
+  #context-path: /bytebpm
+spring:
+  application:
+    name: bytebpm #项目名称
+  #数据库连接相关配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.6.11:3306/test
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    password: ASD19940526.asd
+  #redis相关配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-active: 1000
+      max-wait: 1000
+      max-idle: 100
+    timeout: 100000
+  #mongodb相关配置
+  data:
+    mongodb:
+      host: 192.168.6.11
+      port: 27017
+      database: smartCommunity
+      username: admin
+      password: admin
+      authentication-database: admin
+#扫面mybatis的映射xml文件
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
