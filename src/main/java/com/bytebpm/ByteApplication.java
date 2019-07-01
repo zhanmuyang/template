@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ImportResource;
  */
 @Slf4j
 @SpringBootApplication //核心注解
-@MapperScan("com.bytebpm.mybatis.repository") //扫面mybatis包
+@MapperScan("com.bytebpm") //扫面mybatis包
 public class ByteApplication {
     public static void main(String[] args) {
         log.info("准备启动");
